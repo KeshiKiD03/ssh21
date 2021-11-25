@@ -11,19 +11,19 @@ echo -e "unix02\nunix02\n" | passwd unix02
 echo -e "unix03\nunix03\n" | passwd unix03
 
 # Copiar arxius necesaris
-#cp /opt/docker/ldap.conf /etc/ldap/ldap.conf
+cp /opt/docker/ldap.conf /etc/ldap/ldap.conf
 cp /opt/docker/login.defs /etc/login.defs
-#cp /opt/docker/nsswitch.conf /etc/nsswitch.conf
-#cp /opt/docker/nslcd.conf /etc/nslcd.conf
-#cp /opt/docker/pam_mount.conf.xml /etc/security/pam_mount.conf.xml
-#cp /opt/docker/common-auth /etc/pam.d/common-auth
-#cp /opt/docker/common-account /etc/pam.d/common-account
-#cp /opt/docker/common-password /etc/pam.d/common-password
-#cp /opt/docker/common-session /etc/pam.d/common-session
+cp /opt/docker/nsswitch.conf /etc/nsswitch.conf
+cp /opt/docker/nslcd.conf /etc/nslcd.conf
+cp /opt/docker/pam_mount.conf.xml /etc/security/pam_mount.conf.xml
+cp /opt/docker/common-auth /etc/pam.d/common-auth
+cp /opt/docker/common-account /etc/pam.d/common-account
+cp /opt/docker/common-password /etc/pam.d/common-password
+cp /opt/docker/common-session /etc/pam.d/common-session
 
 # Engegar dimonis necesaris
-#/usr/sbin/nscd
-#/usr/sbin/nslcd
+/usr/sbin/nscd
+/usr/sbin/nslcd
 mkdir /run/sshd
 /usr/sbin/sshd -D
 # Asegurar que funcione
@@ -31,7 +31,7 @@ mkdir /run/sshd
 #getent group
 
 # Interactiu
-#/bin/bash
+/bin/bash
 
 # Detach
 #/bin/bash
